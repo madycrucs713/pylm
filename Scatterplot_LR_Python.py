@@ -16,26 +16,29 @@ y = data ['y']
 plt.figure(figsize=(10, 8))
 plt.scatter(data['x'], data['y'], color='cornflowerblue')
 
-model = LinearRegression()
-model.fit(x, y)
+plt.xlabel('X axis')
+plt.ylabel('Y axis')
+plt.title('Scatter Plot Using Python')
+
+plt.savefig('Scatterplot_Python.png')
+plt.close()
+
+plt.figure(figsize=(10, 8))
+plt.scatter(data['x'], data['y'], color='cornflowerblue')
 
 plt.xlabel('X axis')
 plt.ylabel('Y axis')
-plt.title('Scatter Plot with Linear Model Using Python')
+plt.title('Scatter Plot with Linear Regression Using Python')
 
-plt.savefig('Scatterplot_Python.png')
-plt.show()
+model = LinearRegression()
+model.fit(x, y)
 
 y_pred = model.predict(x)
 
 plt.plot(data['x'], y_pred, color='maroon')
 
-plt.savefig('Scatterplot_LM_Python.png')
+plt.savefig('Scatterplot_LR_Python.png')
 plt.show()
 
 
 # In[ ]:
-
-
-
-
